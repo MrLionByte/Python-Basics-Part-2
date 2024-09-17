@@ -32,3 +32,19 @@ dict2 = {'b': 3, 'c': 4}
 result = merge_dicts(dict1, dict2)
 print(result) 
 
+#Write a Python function count_occurrences that takes a list of elements and returns a dictionary where
+# the keys are the unique elements from the list, and the values are the counts of those elements in the list.
+
+def count_occurrences(elements: list) -> dict:
+    data_dict = {}
+    for element in elements:
+        if element not in data_dict:
+            data_dict[element] = 1
+        else:
+            data_dict[element] += 1
+    return data_dict
+
+
+elements = ['apple', 'banana', 'apple', 'orange', 'banana', 'banana']
+result = count_occurrences(elements)
+print(result)
